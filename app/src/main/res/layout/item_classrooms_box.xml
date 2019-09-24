@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/expand_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/bg_item_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        app:elevation="6dp">
+
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_classrooms"/>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:textSize="18sp"
+            android:textColor="@color/secondaryText"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Constancia de Estudios"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/arrow_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@null"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_expand_more"/>
+
+    </FrameLayout>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="300"
+        app:el_expanded="false"
+        tools:el_expanded="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/theory_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/metal_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_circle_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:text="@string/content_theory_text"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_chevron_right"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/exercice1_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/metal_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_circle_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:text="@string/content_practice_text"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_chevron_right"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/exercice2_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/metal_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_circle_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:text="@string/content_reforce_text"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_chevron_right"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/exam_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/metal_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_circle_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:text="@string/content_exam_text"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@null"
+                    android:scaleType="center"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_chevron_right"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>

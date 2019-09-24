@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vlonjatg.progressactivity.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:loadingProgressBarColor="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/count_down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/colorAccent">
+
+        <com.alexfu.countdownview.CountDownView
+            android:id="@+id/count_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title.Inverse"
+            app:startDuration="60000"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/count_down_layout"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"
+        android:layout_above="@+id/finalizar_button"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+    <Button
+        android:id="@+id/finalizar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawableStart="@drawable/ic_checkbox_marked_circle"
+        android:drawableEnd="@drawable/ic_checkbox_marked_circle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="@string/quiz_submission_button"/>
+
+</com.vlonjatg.progressactivity.ProgressRelativeLayout>

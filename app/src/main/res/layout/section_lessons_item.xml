@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/buy_button"
+            android:layout_marginBottom="4dp"
+            android:textSize="16sp"
+            android:textColor="@color/secondaryText"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Sintaxis Básica de PHP"/>
+
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text"
+            android:layout_toStartOf="@+id/buy_button"
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="S/ 180.00"/>
+
+        <Button
+            android:id="@+id/buy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableStart="@drawable/ic_cart_white"
+            android:drawablePadding="8dp"
+            android:text="@string/app_buy"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

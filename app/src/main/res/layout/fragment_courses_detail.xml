@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vlonjatg.progressactivity.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:loadingProgressBarColor="@color/colorAccent">
+
+    <RelativeLayout
+        android:id="@+id/cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_drawer_header"/>
+
+        <RelativeLayout
+            android:id="@+id/gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:alpha=".8"
+            android:background="@color/card_dark"/>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Programación Móvil con Android"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cover_image">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</com.vlonjatg.progressactivity.ProgressRelativeLayout>

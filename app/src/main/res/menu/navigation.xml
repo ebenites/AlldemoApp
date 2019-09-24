@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_nav_main"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:title="@string/title_home"
+            android:icon="@drawable/ic_home" />
+
+        <item
+            android:id="@+id/nav_classrooms"
+            android:title="@string/title_classrooms"
+            android:icon="@drawable/ic_classrooms" />
+
+        <item
+            android:id="@+id/nav_courses"
+            android:title="@string/title_courses"
+            android:icon="@drawable/ic_courses" />
+
+        <item
+            android:id="@+id/nav_books"
+            android:title="@string/title_books"
+            android:icon="@drawable/ic_books" />
+
+        <item
+            android:id="@+id/nav_assignments"
+            android:title="@string/title_assignments"
+            android:icon="@drawable/ic_assignments" />
+
+        <item
+            android:id="@+id/nav_gradebook"
+            android:title="@string/title_gradebook"
+            android:icon="@drawable/ic_statistics" />
+
+    </group>
+
+    <group
+        android:id="@+id/group_nav_system"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/title_profile"
+            android:icon="@drawable/ic_profile" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/title_logout"
+            android:icon="@drawable/ic_logout" />
+
+    </group>
+
+</menu>

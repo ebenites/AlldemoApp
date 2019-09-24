@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@drawable/bg_drawer_header"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Imagen de perfil -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/menu_photo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_profile"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp" />
+
+    <!-- Nombre de Usuario -->
+    <TextView
+        android:id="@+id/menu_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        tools:text="Erick Benites Cuenca" />
+
+    <!-- Correo de la cuenta -->
+    <TextView
+        android:id="@+id/menu_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="erick.benites@gmail.com" />
+
+</LinearLayout>

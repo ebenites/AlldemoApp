@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/respuesta_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"/>-->
+
+    <com.nex3z.togglebuttongroup.button.CircularToggle
+        android:id="@+id/respuesta_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_custom_circle"
+        app:tbgMarkerColor="@color/colorAccent"
+        tools:text="A"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/respuesta_button">
+
+        <WebView
+            android:id="@+id/content_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/correcto_image"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        tools:tint="@color/colorPrimary"
+        tools:srcCompat="@drawable/ic_checkbox_marked_circle"/>
+
+</RelativeLayout>
